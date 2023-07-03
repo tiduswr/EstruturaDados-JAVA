@@ -5,18 +5,31 @@ import com.tiduswr.tad.lists.linked_list.LinkedList;
 import com.tiduswr.tad.lists.linked_list.LinkedListImpl;
 import com.tiduswr.tad.queue.Queue;
 import com.tiduswr.tad.queue.QueueImpl;
+import com.tiduswr.tad.stack.Stack;
+import com.tiduswr.tad.stack.StackImpl;
 import com.tiduswr.tad.trees.Tree;
 import com.tiduswr.tad.trees.binary.BinaryTree;
 
 public class Main 
 {
     public static void main( String[] args ) throws ValueAlreadyExists{
-        queueTest();
+        stackTest();
+        //queueTest();
         //linkedListTest();
         //binaryTreeTest();
     }
 
-    public static void queueTest(){
+    private static void stackTest() {
+        Stack<Integer> stack = new StackImpl<>();
+
+        stack.push(1);
+        stack.push(2);
+        stack.pop();
+
+        System.out.println(stack.peek());
+    }
+
+    private static void queueTest(){
         Queue<Integer> queue = new QueueImpl<>();
     
         queue.enqueue(1);
@@ -26,7 +39,7 @@ public class Main
         System.out.println(queue.peek());
     }
 
-    public static void linkedListTest(){
+    private static void linkedListTest(){
         System.out.println("##### Linked List | INICIO\n");
 
         LinkedList<Integer> list = new LinkedListImpl<>();
@@ -49,7 +62,7 @@ public class Main
         System.out.println("\n##### Linked List | FIM");
     }
 
-    public static void binaryTreeTest() throws ValueAlreadyExists{
+    private static void binaryTreeTest() throws ValueAlreadyExists{
         System.out.println("##### Binary Tree | INICIO\n");
 
         Tree<Integer> arvore = new BinaryTree<Integer>();
