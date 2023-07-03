@@ -6,6 +6,7 @@ public interface LinkedList<T> {
     Node<T> getRootNode();
     void insertLast(T value);
     void insertFirst(T value);
+    boolean remove(long index);
     T get(long index);
     
 }

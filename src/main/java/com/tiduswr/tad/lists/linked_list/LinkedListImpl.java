@@ -52,7 +52,7 @@ public class LinkedListImpl<T> implements LinkedList<T> {
     public T get(long index) {
         long indexSum = 0;
 
-        if(index >= size) return null;
+        if(index >= size || index < 0) return null;
 
         Node<T> cur = rootNode;
         while(cur.hasNext()){
@@ -62,6 +62,32 @@ public class LinkedListImpl<T> implements LinkedList<T> {
         }
 
         return cur != null ? cur.getValue() : null;
+    }
+
+    @Override
+    public boolean remove(long index) {
+        if(size > 0 && index < size){
+            long indexSum = 0;
+            Node<T> prev = null;
+            Node<T> cur = rootNode;
+
+            while(cur.hasNext()){
+                prev = cur;
+                cur = cur.getNext();
+                indexSum++;
+                if(index == indexSum) 
+                    break;
+            }
+
+            prev.setNext(cur.getNext());
+            cur.setNext(null);
+            this.size--;
+
+            return true;
+        }else{
+            return false;
+        }
+        
     }
     
 }
