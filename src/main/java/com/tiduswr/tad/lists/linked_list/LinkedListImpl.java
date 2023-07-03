@@ -72,14 +72,20 @@ public class LinkedListImpl<T> implements LinkedList<T> {
             Node<T> cur = rootNode;
 
             while(cur.hasNext()){
+                if(index == indexSum) 
+                    break;
                 prev = cur;
                 cur = cur.getNext();
                 indexSum++;
-                if(index == indexSum) 
-                    break;
             }
 
-            prev.setNext(cur.getNext());
+            if(prev == null){
+                System.out.println("entrei");
+                this.rootNode = cur.getNext();
+            }else{
+                prev.setNext(cur.getNext());
+            }
+            
             cur.setNext(null);
             this.size--;
 

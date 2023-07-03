@@ -3,14 +3,27 @@ package com.tiduswr;
 import com.tiduswr.tad.exceptions.ValueAlreadyExists;
 import com.tiduswr.tad.lists.linked_list.LinkedList;
 import com.tiduswr.tad.lists.linked_list.LinkedListImpl;
+import com.tiduswr.tad.queue.Queue;
+import com.tiduswr.tad.queue.QueueImpl;
 import com.tiduswr.tad.trees.Tree;
 import com.tiduswr.tad.trees.binary.BinaryTree;
 
 public class Main 
 {
     public static void main( String[] args ) throws ValueAlreadyExists{
-        linkedListTest();
+        queueTest();
+        //linkedListTest();
         //binaryTreeTest();
+    }
+
+    public static void queueTest(){
+        Queue<Integer> queue = new QueueImpl<>();
+    
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.dequeue();
+
+        System.out.println(queue.peek());
     }
 
     public static void linkedListTest(){
