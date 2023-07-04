@@ -1,5 +1,6 @@
 package com.tiduswr;
 
+import com.tiduswr.sort.Sorter;
 import com.tiduswr.tad.exceptions.ValueAlreadyExists;
 import com.tiduswr.tad.lists.linked_list.LinkedList;
 import com.tiduswr.tad.lists.linked_list.LinkedListImpl;
@@ -13,10 +14,82 @@ import com.tiduswr.tad.trees.binary.BinaryTree;
 public class Main 
 {
     public static void main( String[] args ) throws ValueAlreadyExists{
-        stackTest();
+        mergeSortTest();
+        //insertionSortTest();
+        //selectionSortTest();
+        //bubbleSortTest();
+        //stackTest();
         //queueTest();
         //linkedListTest();
         //binaryTreeTest();
+    }
+
+    private static void mergeSortTest() {
+        int[] arr = new int[]{3,5,1,8,7};
+        int[] sorted = Sorter.mergeSort(arr);
+        
+        System.out.print("Original: ");
+        for(int i : arr){
+            System.out.print(i + " ");
+        }
+
+        System.out.println();
+
+        System.out.print("Sorted: ");
+        for(int i : sorted){
+            System.out.print(i + " ");
+        }
+    }
+
+    private static void insertionSortTest() {
+        int[] arr = new int[]{3,5,1,8,7};
+        int[] sorted = Sorter.insertionSort(arr);
+        
+        System.out.print("Original: ");
+        for(int i : arr){
+            System.out.print(i + " ");
+        }
+
+        System.out.println();
+
+        System.out.print("Sorted: ");
+        for(int i : sorted){
+            System.out.print(i + " ");
+        }
+    }
+
+    private static void selectionSortTest() {
+        int[] arr = new int[]{3,5,1,8,7};
+        int[] sorted = Sorter.selectionSort(arr);
+        
+        System.out.print("Original: ");
+        for(int i : arr){
+            System.out.print(i + " ");
+        }
+
+        System.out.println();
+
+        System.out.print("Sorted: ");
+        for(int i : sorted){
+            System.out.print(i + " ");
+        }
+    }
+
+    private static void bubbleSortTest() {
+        int[] arr = new int[]{3,5,1,8,7};
+        int[] sorted = Sorter.bubbleSort(arr);
+        
+        System.out.print("Original: ");
+        for(int i : arr){
+            System.out.print(i + " ");
+        }
+
+        System.out.println();
+
+        System.out.print("Sorted: ");
+        for(int i : sorted){
+            System.out.print(i + " ");
+        }
     }
 
     private static void stackTest() {
