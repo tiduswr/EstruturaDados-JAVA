@@ -25,8 +25,9 @@ public class Main
     }
 
     private static void mergeSortTest() {
-        int[] arr = new int[]{3,5,1,8,7};
-        int[] sorted = Sorter.mergeSort(arr);
+        Sorter<Integer> sorter = new Sorter<>();
+        Integer[] arr = new Integer[]{3,5,1,8,7};
+        Integer[] sorted = sorter.mergeSort(arr);
         
         System.out.print("Original: ");
         for(int i : arr){
@@ -42,8 +43,9 @@ public class Main
     }
 
     private static void insertionSortTest() {
-        int[] arr = new int[]{3,5,1,8,7};
-        int[] sorted = Sorter.insertionSort(arr);
+        Sorter<Integer> sorter = new Sorter<>();
+        Integer[] arr = new Integer[]{3,5,1,8,7};
+        Integer[] sorted = sorter.insertionSort(arr);
         
         System.out.print("Original: ");
         for(int i : arr){
@@ -59,8 +61,9 @@ public class Main
     }
 
     private static void selectionSortTest() {
-        int[] arr = new int[]{3,5,1,8,7};
-        int[] sorted = Sorter.selectionSort(arr);
+        Sorter<Integer> sorter = new Sorter<>();
+        Integer[] arr = new Integer[]{3,5,1,8,7};
+        Integer[] sorted = sorter.selectionSort(arr);
         
         System.out.print("Original: ");
         for(int i : arr){
@@ -76,8 +79,9 @@ public class Main
     }
 
     private static void bubbleSortTest() {
-        int[] arr = new int[]{3,5,1,8,7};
-        int[] sorted = Sorter.bubbleSort(arr);
+        Sorter<Integer> sorter = new Sorter<>();
+        Integer[] arr = new Integer[]{3,5,1,8,7};
+        Integer[] sorted = sorter.bubbleSort(arr);
         
         System.out.print("Original: ");
         for(int i : arr){
