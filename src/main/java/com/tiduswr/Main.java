@@ -18,9 +18,9 @@ import com.tiduswr.tad.trees.binary.BinaryTree;
 public class Main 
 {
     public static void main( String[] args ) throws ValueAlreadyExists{
-        //metodosBuscaTest();
+        metodosBuscaTest();
         //matrixGraphTest();
-        adjacencyListGraphTest();
+        //adjacencyListGraphTest();
         //mergeSortTest();
         //insertionSortTest();
         //selectionSortTest();
