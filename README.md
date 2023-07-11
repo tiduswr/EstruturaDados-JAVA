@@ -1,5 +1,3 @@
-Aqui está um exemplo de `README.md` para o projeto:
-
 # Java Data Structures and Sorting Algorithms
 
 Este projeto contém implementações em Java de estruturas de dados e algoritmos de classificação. Ele inclui implementações das seguintes estruturas de dados:
