@@ -34,13 +34,13 @@ public class GrafoComMatrizAdjacencias implements Grafo{
     }
 
     private int removerAresta(int currentValue){
-        return currentValue >= 0 ? currentValue - 1 : 0;
+        return currentValue > 0 ? currentValue - 1 : 0;
     }
 
     public void temAresta(char o, char d) {
         int indexO = o - 'A';
         int indexD = d - 'A';
-        if (adjacencyMatrix[indexO][indexD] >= 1) {
+        if (isDirected && adjacencyMatrix[indexO][indexD] >= 1) {
             System.out.println("Existe uma aresta entre " + o + " e " + d);
         } else {
             System.out.println("Não existe uma aresta entre " + o + " e " + d);
@@ -74,7 +74,7 @@ public class GrafoComMatrizAdjacencias implements Grafo{
         int currIndex = currVertex - 'A';
         
         for (int i = 0; i < numVertices; i++) {
-            if (adjacencyMatrix[currIndex][i] == 1) {
+            if (adjacencyMatrix[currIndex][i] >= 1) {
                 char adjacentVertex = (char) ('A' + i);
                 adjacentVertices.add(adjacentVertex);
             }
